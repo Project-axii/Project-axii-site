@@ -63,7 +63,7 @@
                 </h1>
                 <p class="hero-description">
                     Centralize e automatize o gerenciamento de todos os recursos tecnológicos da sua sala de aula. 
-                    Controle computadores, projetores e iluminação com comandos de voz ou pelo aplicativo mobile.
+                    Controle computadores, projetores e iluminação com comandos simples pelos nossos aplicativos.
                 </p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn-primary btn-large">Solicitar Demonstração</a>
@@ -295,16 +295,16 @@
                 <p class="cta-description">
                     Solicite uma demonstração e descubra como o AXII pode otimizar suas aulas
                 </p>
-                <form class="cta-form" id="contactForm">
+                <form  action="https://formspree.io/f/mdkqznlp" method="POST" class="cta-form" id="contactForm">
                     <div class="form-row">
-                        <input type="text" placeholder="Nome completo" required>
-                        <input type="email" placeholder="E-mail institucional" required>
+                        <input name="nome" type="text" placeholder="Nome completo" required>
+                        <input name="email" type="email" placeholder="E-mail institucional" required>
                     </div>
                     <div class="form-row">
-                        <input type="text" placeholder="Instituição de ensino" required>
-                        <input type="tel" placeholder="Telefone" required>
+                        <input name="instituição" type="text" placeholder="Instituição de ensino" required>
+                        <input name="telefone" type="tel" placeholder="Telefone" required>
                     </div>
-                    <textarea placeholder="Conte-nos sobre suas necessidades..." rows="4"></textarea>
+                    <textarea name="necessidades" placeholder="Conte-nos sobre suas necessidades..." rows="4"></textarea>
                     <button type="submit" class="btn-primary btn-large">Solicitar Demonstração</button>
                 </form>
             </div>
@@ -375,7 +375,16 @@
             </div>
         </div>
     </footer>
-
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
     <script src="script.js"></script>
 </body>
 </html>
